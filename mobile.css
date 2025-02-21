@@ -1,1 +1,69 @@
+/* mobile.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
 
+.hero {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu-card {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.menu-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.menu-card .price {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.menu-card .description {
+  color: #666;
+  font-size: 0.9em;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+
+footer .social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
