@@ -19,6 +19,12 @@ var menuItems = [
     description: "Creamy blend of espresso and steamed milk."
   },
   {
+    name: "Cookies",
+    price: "$5.00",
+    image: "images/cookies.jpg",
+    description: "Freshly baked, with chocolate chips and hazelnut."
+  },
+  {
     name: "Croissant",
     price: "$2.00",
     image: "images/croissant.jpg",
