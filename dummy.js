@@ -1,4 +1,4 @@
-// dummy.js
+// dummy.js for english
 var menuItems = [
   {
     name: "Espresso",
