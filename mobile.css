@@ -6,6 +6,7 @@ body {
 }
 
 .hero {
+  position: relative;
   background-image: url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -67,3 +68,20 @@ footer .social-links a {
   margin: 0 10px;
   text-decoration: none;
 }
+
+.flag-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.flag-btn {
+  font-size: 1.5em;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
