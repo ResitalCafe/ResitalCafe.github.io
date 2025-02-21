@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resital Cafe Dijital Mönüsü</title>
+  <!-- Mobile-first CSS -->
+  <link rel="stylesheet" href="mobile.css" />
+  <!-- Desktop-specific CSS (applied when viewport is at least 768px wide) -->
+  <link rel="stylesheet" media="(min-width: 768px)" href="desktop.css" />
+  <style>
+    /* Optional inline CSS for flag button positioning */
+    .flag-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .flag-btn {
+      font-size: 1.5em;
+      text-decoration: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header section -->
+  <header class="hero" style="position: relative;">
+    <div class="flag-buttons">
+      <!-- Turkey flag leads to index2.html -->
+      <a href="index2.html" class="flag-btn" title="Türkçe">🇹🇷</a>
+      <!-- British flag leads to index.html -->
+      <a href="index.html" class="flag-btn" title="English">🇬🇧</a>
+    </div>
+    <h1>Resital Cafe dijital mönüsü</h1>
+  </header>
+
+  <!-- Main content where item cards will be dynamically injected -->
+  <main>
+    <section id="menu-items">
+      <!-- Item cards will be generated here using data from dummy.js -->
+    </section>
+  </main>
+
+  <!-- Footer with social links -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/resitalkafe/" target="_blank">Instagram</a>
+      <p> Bizi arayın : +90 544 366 9498 </p>
+    </div>
+  </footer>
+
+  <!-- Include the dummy data file -->
+  <script src="dummy2.js"></script>
+  <!-- Script to dynamically generate item cards -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuContainer = document.getElementById('menu-items');
+      if (typeof menuItems !== 'undefined' && Array.isArray(menuItems)) {
+        menuItems.forEach(function (item) {
+          // Create the card container
+          var card = document.createElement('div');
+          card.className = 'menu-card';
+          
+          // Create and append the image element
+          var img = document.createElement('img');
+          img.src = item.image;
+          img.alt = item.name;
+          card.appendChild(img);
+          
+          // Create and append the item name
+          var name = document.createElement('h3');
+          name.textContent = item.name;
+          card.appendChild(name);
+          
+          // Create and append the price element
+          var price = document.createElement('p');
+          price.className = 'price';
+          price.textContent = item.price;
+          card.appendChild(price);
+          
+          // Create and append the description element
+          var desc = document.createElement('p');
+          desc.className = 'description';
+          desc.textContent = item.description;
+          card.appendChild(desc);
+          
+          // Append the completed card to the container
+          menuContainer.appendChild(card);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
