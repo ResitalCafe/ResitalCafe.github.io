@@ -3,16 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resital Cafe Dijital Mönüsü</title>
+  <title>Resital Cafe Digital Menu</title>
   <!-- Mobile-first CSS -->
   <link rel="stylesheet" href="mobile.css" />
   <!-- Desktop-specific CSS (applied when viewport is at least 768px wide) -->
   <link rel="stylesheet" media="(min-width: 768px)" href="desktop.css" />
+  <style>
+    /* Optional inline CSS for flag button positioning */
+    .flag-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .flag-btn {
+      font-size: 1.5em;
+      text-decoration: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <!-- Header section -->
-  <header class="hero">
-    <h1>Resital Cafe dijital mönüsü</h1>
+  <header class="hero" style="position: relative;">
+    <div class="flag-buttons">
+      <!-- Turkey flag leads to index2.html -->
+      <a href="index2.html" class="flag-btn" title="Türkçe">🇹🇷</a>
+      <!-- British flag leads to index.html -->
+      <a href="index.html" class="flag-btn" title="English">🇬🇧</a>
+    </div>
+    <h1>Resital Cafe digital menu</h1>
   </header>
 
   <!-- Main content where item cards will be dynamically injected -->
