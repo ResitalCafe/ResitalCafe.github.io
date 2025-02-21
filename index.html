@@ -10,7 +10,7 @@
   <link rel="stylesheet" media="(min-width: 768px)" href="desktop.css" />
 </head>
 <body>
-  <!-- Header section with a background image (set via CSS) -->
+  <!-- Header section -->
   <header class="hero">
     <h1>Resital Cafe dijital mönüsü</h1>
   </header>
@@ -36,17 +36,6 @@
   <!-- Script to dynamically generate item cards -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Assume dummy.js provides a global variable 'menuItems'
-      // Example structure:
-      // var menuItems = [
-      //   {
-      //     name: "Espresso",
-      //     price: "$2.50",
-      //     image: "images/espresso.jpg",
-      //     description: "A bold and energizing coffee shot."
-      //   },
-      //   ...
-      // ];
       var menuContainer = document.getElementById('menu-items');
       if (typeof menuItems !== 'undefined' && Array.isArray(menuItems)) {
         menuItems.forEach(function (item) {
